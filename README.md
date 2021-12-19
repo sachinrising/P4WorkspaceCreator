@@ -1,5 +1,7 @@
-![ci](https://img.shields.io/github/v/release/sachinrising/p4-workspace-creator) ![ci](https://img.shields.io/github/release-date/sachinrising/p4workspacecreator) ![ci](https://img.shields.io/pypi/pyversions/P4WorkspaceCreator)  ![ci](https://img.shields.io/github/license/sachinrising/P4WorkspaceCreator)
+<a href="https://pypi.org/project/P4WorkspaceCreator">![ci](https://img.shields.io/github/v/release/sachinrising/p4-workspace-creator)</a> <a href="">![ci](https://img.shields.io/github/release-date/sachinrising/p4workspacecreator)</a> <a href="">![ci](https://img.shields.io/pypi/pyversions/P4WorkspaceCreator)</a>  <a href="">![ci](https://img.shields.io/github/license/sachinrising/P4WorkspaceCreator)</a>
 
+
+<a href=""><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/sachinrising/p4workspacecreator"></a>
 # P4WorkspaceCreator
 
 ## Description
