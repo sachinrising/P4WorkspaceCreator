@@ -1,3 +1,10 @@
+'''
+Created Date: Sunday, December 19th 2021
+Author: Sachin Srivastava
+
+Copyright (c) 2021 Sachin Srivastava
+'''
+
 from P4 import P4 as Perforce
 from P4 import P4Exception
 import os
