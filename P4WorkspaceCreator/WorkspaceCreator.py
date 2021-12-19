@@ -52,7 +52,7 @@ def scan_args(args=None):
         '-s', '--spec', help="Spec file path in depot", required=True)
 
     parser.add_argument(
-        '-l', '--placeholder', help="Place holder used in the spec file e.g <ClientName>", default="<ClientName>")
+        '-l', '--placeholder', help="Place holder used in the spec file e.g '<ClientName>'", required=True, default="<ClientName>")
 
     result = parser.parse_args(args)
 
@@ -187,23 +187,21 @@ def intialize_and_create_workspace(**kargs):
         sys.exit(1)
 
 
-if __name__ == "__main__":
-    user, password, port, client, root, spec, placeholder = scan_args(
-        sys.argv[1:])
+def main(args):
+    user, password, port, client, root, spec, placeholder = scan_args(args)
 
     logger = main_logger
 
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     stream_handler = logging.StreamHandler(sys.stderr)
 
     formatter = logging.Formatter(
-        "[%(asctime)s] [%(name)s] [%(funcName)s] [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S"
+        "[%(asctime)s] [%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S"
     )
 
     stream_handler.setFormatter(formatter)
 
-    stream_handler.setLevel(logging.DEBUG)
     logger.addHandler(stream_handler)
 
     if user == None or password == None or client == None or spec == None:
@@ -212,3 +210,7 @@ if __name__ == "__main__":
 
     intialize_and_create_workspace(user=user, password=password, port=port, client=client,
                                    root=root, spec_file=spec, placeholder=placeholder, logger=logger)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
