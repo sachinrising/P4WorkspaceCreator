@@ -2,7 +2,7 @@
 Created Date: Sunday, December 19th 2021
 Author: Sachin Srivastava
 
-Copyright (c) 2021 Sachin Srivastava
+Copyright (c) 2024 Sachin Srivastava
 '''
 
 from P4 import P4 as Perforce
@@ -116,7 +116,7 @@ def create(p4, root_path, client_name, spec_file_path, place_holder, logger):
             logger.error("Unable to disconnect the perforce connection.")
 
         if os.path.exists(temp_spec_output_path):
-            logger.info(
+            logger.debug(
                 f"Deleting temporary spec file created in the temp directory {temp_spec_output_path}")
             try:
                 os.chmod(temp_spec_output_path, S_IWUSR | S_IREAD)
